@@ -2,7 +2,7 @@
 
 use Illuminate\Foundation\AliasLoader;
 
-class GrvatarServiceProvider extends \Illuminate\Support\ServiceProvider
+class GravatarServiceProvider extends \Illuminate\Support\ServiceProvider
 {
     /**
      * Register the service provider.
