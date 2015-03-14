@@ -11,10 +11,10 @@ class Gravatar extends GravatarLib
     {
         // Enable secure images by default
 
-        $this->setDefaultImage(Config::get('laravel-gravatar::default'));
-        $this->default_size = Config::get('laravel-gravatar::size');
+        $this->setDefaultImage(Config::get('gravatar::default', 'identicon'));
+        $this->default_size = Config::get('gravatar::size', 80);
 
-        $this->setMaxRating(Config::get('laravel-gravatar::maxRating', 'g'));
+        $this->setMaxRating(Config::get('gravatar::maxRating', 'g'));
         $this->enableSecureImages();
     }
 
