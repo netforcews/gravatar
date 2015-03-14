@@ -1,0 +1,24 @@
+{
+	"name": "netforcews/gravatar",
+	"description": "The Gravatar for Laravel 5",
+	"keywords": ["netforce", "gravatar", "php", "brunogoncalves", "laravel"],
+	"license": "GPL v.3",
+    "authors": [
+        {
+            "name": "Bruno Gonçalves",
+            "email": "bugotech@gmail.com"
+        }
+    ],
+	"require": {
+        "laravel/framework": "5.0.*"
+	},
+	"autoload": {
+        "classmap": [
+            "src"
+        ]
+	},
+	"config": {
+		"preferred-install": "dist"
+	},
+	"minimum-stability": "dev"
+}
