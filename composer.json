@@ -2,7 +2,7 @@
 	"name": "netforcews/gravatar",
 	"description": "The Gravatar for Laravel 5",
 	"keywords": ["netforce", "gravatar", "php", "brunogoncalves", "laravel"],
-	"license": "GPL v.3",
+	"license": "MIT",
     "authors": [
         {
             "name": "Bruno Gonçalves",
