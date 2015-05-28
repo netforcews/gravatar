@@ -5,7 +5,8 @@ use Illuminate\Support\Facades\HTML;
 
 class Gravatar extends GravatarLib
 {
-    private $default_size = null;
+    private   $default_size = null;
+    protected $cache        = [];
 
     public function __construct()
     {
@@ -20,6 +21,12 @@ class Gravatar extends GravatarLib
 
     public function src($email, $size = null, $rating = null)
     {
+        $id_cache = sprintf('%s.%s.%s', $email, $size, $rating);
+
+        // Verificar se esta em cache
+        if (array_key_exists($id_cache, $this->cache))
+            return $this->cache[$id_cache];
+
         if (is_null($size)) {
             $size = $this->default_size;
         }
@@ -30,7 +37,14 @@ class Gravatar extends GravatarLib
 
         if (!is_null($rating)) $this->setMaxRating($rating);
 
-        return htmlentities($this->buildGravatarURL($email));
+        // Gerar URL
+        $src = htmlentities($this->buildGravatarURL($email));
+
+        // Salvar no cache
+        $this->cache[$id_cache] = $src;
+
+        // Retornar
+        return $src;
     }
 
     public function image($email, $alt = null, $attributes = array(), $rating = null)
