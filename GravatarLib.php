@@ -81,7 +81,7 @@ class GravatarLib
     /**
      * Set the default image to use for avatars.
      * @param mixed $image - The default image to use. Use boolean false for the gravatar default, a string containing a valid image URL, or a string specifying a recognized gravatar "default".
-     * @return \NetForce\Common\Gravatar\GravatarLib - Provides a fluent interface.
+     * @return \NetForce\Gravatar\GravatarLib - Provides a fluent interface.
      *
      * @throws \InvalidArgumentException
      */
