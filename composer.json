@@ -13,9 +13,9 @@
         "laravel/framework": "5.1.*"
 	},
 	"autoload": {
-        "classmap": [
-            "src"
-        ]
+        "psr-4"   : {
+            "NetForce\\Gravatar\\": ""
+        }
 	},
 	"config": {
 		"preferred-install": "dist"
