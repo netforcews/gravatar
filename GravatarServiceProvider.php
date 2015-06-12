@@ -16,7 +16,7 @@ class GravatarServiceProvider extends \Illuminate\Support\ServiceProvider
 
         // Booting
         $this->app->booting(function () {
-            $loader = \Illuminate\Foundation\AliasLoader\AliasLoader::getInstance();
+            $loader = \Illuminate\Foundation\AliasLoader::getInstance();
             $loader->alias('Gravatar', '\NetForce\Gravatar\Facades\Gravatar');
         });
     }
