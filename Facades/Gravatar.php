@@ -1,4 +1,4 @@
-<?php namespace NetForce\Common\Gravatar\Facades;
+<?php namespace NetForce\Gravatar\Facades;
 
 class Gravatar extends \Illuminate\Support\Facades\Facade
 {

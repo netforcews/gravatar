@@ -1,6 +1,4 @@
-<?php namespace NetForce\Common\Gravatar;
-
-use Illuminate\Foundation\AliasLoader;
+<?php namespace NetForce\Gravatar;
 
 class GravatarServiceProvider extends \Illuminate\Support\ServiceProvider
 {
@@ -13,13 +11,13 @@ class GravatarServiceProvider extends \Illuminate\Support\ServiceProvider
     {
         // Registrar provider
         $this->app->singleton('gravatar', function ($app) {
-            return new \NetForce\Common\Gravatar\Gravatar($app);
+            return new \NetForce\Gravatar\Gravatar($app);
         });
 
         // Booting
         $this->app->booting(function () {
-            $loader = AliasLoader::getInstance();
-            $loader->alias('Gravatar', '\NetForce\Common\Gravatar\Facades\Gravatar');
+            $loader = \Illuminate\Foundation\AliasLoader\AliasLoader::getInstance();
+            $loader->alias('Gravatar', '\NetForce\Gravatar\Facades\Gravatar');
         });
     }
 

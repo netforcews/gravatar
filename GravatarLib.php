@@ -1,4 +1,4 @@
-<?php namespace NetForce\Common\Gravatar;
+<?php namespace NetForce\Gravatar;
 
 use \InvalidArgumentException;
 
